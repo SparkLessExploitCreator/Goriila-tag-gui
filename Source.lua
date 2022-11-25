@@ -3,13 +3,9 @@ local Window = Library.CreateLib("🅖🅞🅡🅘🅛🅛🅐 ​ 🅣🅐🅖 
 
 local Gorilla = Window:NewTab("Gorilla")
 local SpeedandJump = Gorilla:NewSection("Speed and Jump")
-SpeedandJump:NewToggle("Speed", "Make u faster", function(state)
-    if state then
-        print("On")
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
-    else
-        print("Off")
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end
+SpeedandJump:NewSlider("Speed", "Make u faster", 100, 16, function(s) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+
+
 

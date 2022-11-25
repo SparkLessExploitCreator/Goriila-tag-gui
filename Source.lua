@@ -2,12 +2,13 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("🅖🅞🅡🅘🅛🅛🅐 ​ 🅣🅐🅖 ​ 🅖🅤🅘 ​ | ​ 🅑🅨 ​ 🅢🅟🅐🅡🅚🅛🅔🅢🅢", "Ocean")
 
 local Gorilla = Window:NewTab("Gorilla")
-local SpeedandJump = Gorilla:NewSection("Speed and Jump")
-SpeedandJump:NewSlider("Speed", "Make u faster", 100, 16, function(v) 
+local Speed = Gorilla:NewSection("Speed")
+local jump = Gorilla:NewSection("Jump")
+Speed:NewSlider("Speed", "Make u faster", 100, 16, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
 
     --jumpPOwer
-SpeedandJump:NewSlider("JumpPower", "JumpPower", 100, 0, function(v)
+jump:NewSlider("JumpPower", "JumpPower", 100, 0, function(v)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 end)

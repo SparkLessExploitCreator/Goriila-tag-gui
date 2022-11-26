@@ -18,6 +18,7 @@ Keybind:NewKeybind("ToggleGui", "ToggleGuiK eybind", Enum.KeyCode.F, function()
 	Library:ToggleUI()
 end)
 
+
 local colors = {
     SchemeColor = Color3.fromRGB(0,255,255),
     Background = Color3.fromRGB(0, 0, 0),
@@ -26,3 +27,4 @@ local colors = {
     ElementColor = Color3.fromRGB(20, 20, 20)
 }
 
+local Window = Library.CreateLib("Tahnks for using", colors)
